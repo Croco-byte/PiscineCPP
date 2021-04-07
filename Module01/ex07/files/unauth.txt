@@ -1,0 +1,2 @@
+Hello, je suis un fichier uniquement ouvert en lecture.
+Avec plusieurs lignes.
