@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:06:30 by user42            #+#    #+#             */
-/*   Updated: 2021/04/07 15:38:25 by user42           ###   ########.fr       */
+/*   Updated: 2021/04/08 15:33:15 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class	Logger
 		void	log(std::string const & dest, std::string const & message);
 
 
-	protected:
+	private:
 		std::string		_filename;
 		std::ofstream	_ofs;
 		

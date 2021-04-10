@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:47:46 by user42            #+#    #+#             */
-/*   Updated: 2021/04/07 12:26:01 by user42           ###   ########.fr       */
+/*   Updated: 2021/04/08 15:32:54 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class	Writer
 		void	write(void);
 
 
-	protected:
+	private:
 		std::string		_filename;
 		std::string		_line;
 		std::string		_s1;

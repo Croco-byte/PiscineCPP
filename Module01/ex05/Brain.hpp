@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 15:15:52 by user42            #+#    #+#             */
-/*   Updated: 2021/04/06 15:44:15 by user42           ###   ########.fr       */
+/*   Updated: 2021/04/08 15:32:05 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	Brain
 
 		std::string	identify(void) const;
 
-	protected:
+	private:
 
 		int		_IQ;
 

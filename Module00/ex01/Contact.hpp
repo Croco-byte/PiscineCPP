@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 16:34:44 by user42            #+#    #+#             */
-/*   Updated: 2021/04/04 14:33:28 by user42           ###   ########.fr       */
+/*   Updated: 2021/04/08 15:30:55 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ public:
 	void		set_underwear_color(std::string new_info);
 	void		set_darkest_secret(std::string new_info);
 
-protected:
+private:
 	std::string		_first_name;
 	std::string		_last_name;
 	std::string		_nickname;

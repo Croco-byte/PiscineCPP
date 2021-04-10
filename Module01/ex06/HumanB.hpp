@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 16:25:02 by user42            #+#    #+#             */
-/*   Updated: 2021/04/06 16:41:15 by user42           ###   ########.fr       */
+/*   Updated: 2021/04/08 15:32:33 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	HumanB
 		void	attack(void);
 		void	setWeapon(Weapon& weapon);
 
-	protected:
+	private:
 		std::string	_name;
 		Weapon*		_weapon;
 

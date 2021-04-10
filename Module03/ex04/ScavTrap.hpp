@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 14:27:25 by user42            #+#    #+#             */
-/*   Updated: 2021/04/08 15:31:47 by user42           ###   ########.fr       */
+/*   Created: 2021/04/09 11:53:21 by user42            #+#    #+#             */
+/*   Updated: 2021/04/10 11:34:40 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEHORDE_H
-# define ZOMBIEHORDE_H
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-#include "Zombie.hpp"
+#include "ClapTrap.hpp"
 
-class	ZombieHorde
+class	ScavTrap : public ClapTrap
 {
 	public:
-		ZombieHorde(int n);
-		~ZombieHorde();
+		ScavTrap(std::string name);
+		ScavTrap(ScavTrap const & src);
+		virtual ~ScavTrap();
 
-		void	setRandName(Zombie& zombie);
-		void	announce(void);
+		ScavTrap &	operator=(ScavTrap const & rhs);
+
+		/* Overrides functions of parent class */
+		void		meleeAttack(std::string const & target);
+		void		rangedAttack(std::string const & target);
+
+		/* New function of child class */
+		void		challengeNewcomer(std::string const & target);
 
 	private:
-		int		_n;
-		Zombie	*_zombies;
-};
 
+};
 
 
 #endif

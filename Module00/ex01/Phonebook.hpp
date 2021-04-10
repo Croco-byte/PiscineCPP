@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 16:05:18 by user42            #+#    #+#             */
-/*   Updated: 2021/04/04 16:14:58 by user42           ###   ########.fr       */
+/*   Updated: 2021/04/08 15:31:03 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
 	void		inc_counter(void);
 	void		dec_counter(void);
 
-protected:
+private:
 	Contact		_contacts[8];
 	int			_counter;
 
