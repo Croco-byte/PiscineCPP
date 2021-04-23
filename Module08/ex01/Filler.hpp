@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   Filler.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 15:08:17 by user42            #+#    #+#             */
-/*   Updated: 2021/04/22 19:22:47 by user42           ###   ########.fr       */
+/*   Created: 2021/04/21 12:15:19 by user42            #+#    #+#             */
+/*   Updated: 2021/04/21 12:19:19 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-# define ICHARACTER_HPP
+#ifndef FILLER_HPP
+# define FILLER_HPP
 
-#include <iostream>
-#include "AMateria.hpp"
-
-class AMateria;
-
-class	ICharacter
+class	Filler
 {
+	private:
+		Filler();
+
+		int	_value;
+
 	public:
-		virtual ~ICharacter() {}
-		virtual std::string const &	getName() const = 0;
-		virtual void	equip(AMateria * m) = 0;
-		virtual void	unequip(int idx) = 0;
-		virtual void	use(int idx, ICharacter & target) = 0;
+		Filler(int value) { this->_value = value; }
+		Filler(Filler const & src) { this->_value = src._value; }
+		~Filler() {}
+		Filler & operator=(Filler const & rhs) { this->_value = rhs._value; return (*this); }
 
-		virtual void	displayMaterias(void) const = 0;
-
+		int	operator()(int offset)
+		{
+			this->_value += offset;
+			return (this->_value);
+		}
 };
+
+
 
 #endif

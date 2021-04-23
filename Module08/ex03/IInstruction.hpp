@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.hpp                                     :+:      :+:    :+:   */
+/*   IInstruction.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 15:08:17 by user42            #+#    #+#             */
-/*   Updated: 2021/04/22 19:22:47 by user42           ###   ########.fr       */
+/*   Created: 2021/04/22 19:22:54 by user42            #+#    #+#             */
+/*   Updated: 2021/04/22 20:11:54 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_HPP
-# define ICHARACTER_HPP
+#ifndef IINSTRUCTION_HPP
+# define IINSTRUCTION_HPP
 
 #include <iostream>
-#include "AMateria.hpp"
+#include <stdio.h>
+#include <vector>
+#include <deque>
+#include <stack>
+#include <queue>
 
-class AMateria;
-
-class	ICharacter
+class	IInstruction
 {
 	public:
-		virtual ~ICharacter() {}
-		virtual std::string const &	getName() const = 0;
-		virtual void	equip(AMateria * m) = 0;
-		virtual void	unequip(int idx) = 0;
-		virtual void	use(int idx, ICharacter & target) = 0;
-
-		virtual void	displayMaterias(void) const = 0;
-
+		virtual			~IInstruction() {}
+		virtual	void	execute(char * data, unsigned short & ptr, unsigned int & ip) const = 0;
 };
 
 #endif
